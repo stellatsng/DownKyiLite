@@ -34,11 +34,10 @@
 
 ### x86 & x64
 
-发布的压缩包中aria2c.exe和ffmpeg.exe均为32位，如果需要请用下面链接中的文件替换。
+发布的压缩包中aria2c.exe为32位，如果需要请用下面链接中的文件替换。
 
 - [aria2-1.36.0-win-32bit](third_party/aria2-1.36.0-win-32bit-build1.zip)
 - [aria2-1.36.0-win-64bit](third_party/aria2-1.36.0-win-64bit-build1.zip)
-- [FFmpeg](https://github.com/leiurayer/FFmpeg-Builds/releases/tag/latest)
 
 ### 相关项目
 
