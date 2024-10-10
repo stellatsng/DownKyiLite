@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -18,11 +18,11 @@ namespace DownKyi.Core.FFmpeg
 
             if (is64Bit)
             {
-                exec = Path.Combine(Environment.CurrentDirectory, "ffmpeg.exe");
+                exec = Path.Combine(Environment.CurrentDirectory, "MP4Box.exe");
             }
             else
             {
-                exec = Path.Combine(Environment.CurrentDirectory, "ffmpeg.exe");
+                exec = Path.Combine(Environment.CurrentDirectory, "MP4Box.exe");
             }
         }
 
@@ -32,16 +32,18 @@ namespace DownKyi.Core.FFmpeg
         /// <param name="video1">音频</param>
         /// <param name="video2">视频</param>
         /// <param name="destVideo"></param>
+        /// 
+        /// MP4Box -add video.mp4 -add audio.aac -new output.mp4
         public static bool MergeVideo(string video1, string video2, string destVideo)
         {
-            string param = $"-y -i \"{video1}\" -i \"{video2}\" -strict -2 -acodec copy -vcodec copy -f mp4 \"{destVideo}\"";
+            string param = $"-add \"{video1}\" -add \"{video2}\" -new \"{destVideo}\"";
             if (video1 == null || !File.Exists(video1))
             {
-                param = $"-y -i \"{video2}\" -strict -2 -acodec copy -vcodec copy -f mp4 \"{destVideo}\"";
+                param = $"-add \"{video2}\" -new \"{destVideo}\"";
             }
             if (video2 == null || !File.Exists(video2))
             {
-                param = $"-y -i \"{video1}\" -strict -2 -acodec copy \"{destVideo}\"";
+                param = $"-add \"{video1}\" -new \"{destVideo}\"";
             }
 
             // 支持flac格式音频
@@ -112,14 +114,17 @@ namespace DownKyi.Core.FFmpeg
 
             // ffmpeg -y -f concat -safe 0 -i filelist.txt -c copy output.mkv
             // 加上-y，表示如果有同名文件，则默认覆盖
+
             string param = $"-y -f concat -safe 0 -i {concatFileName} -c copy \"{destVideo}\" -y";
+            Console.Write("{0}", param);
+
             ExcuteProcess(exec, param, workingDirectory, (s, e) => Console.WriteLine(e.Data));
 
             // 删除临时文件
             try
             {
                 // 删除concat文件
-                File.Delete(workingDirectory + "/" + concatFileName);
+                //File.Delete(workingDirectory + "/" + concatFileName);
 
                 foreach (string flv in flvFiles)
                 {
