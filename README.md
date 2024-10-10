@@ -21,20 +21,6 @@
 
 [更多详情](src/README.md)
 
-## 下载
-
-<p align="left">
-    <a href="https://github.com/leiurayer/downkyi/releases/latest" style="text-decoration:none">
-       <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/leiurayer/downkyi">
-    </a>
-    <a href="https://github.com/leiurayer/downkyi/releases/latest" style="text-decoration:none">
-       <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/leiurayer/downkyi">
-    </a>
-    <a href="https://github.com/leiurayer/downkyi/releases" style="text-decoration:none">
-       <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/leiurayer/downkyi/total">
-    </a>
-</p>
-
 [更新日志](CHANGELOG.md)
 
 ## 问题
