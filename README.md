@@ -1,15 +1,6 @@
 # 哔哩下载姬
 
 <p align="center">
-    <a href="https://github.com/leiurayer/downkyi/stargazers" style="text-decoration:none" >
-        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/leiurayer/downkyi">
-    </a>
-    <a href="https://github.com/leiurayer/downkyi/network" style="text-decoration:none" >
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/leiurayer/downkyi">
-    </a>
-    <a href="https://github.com/leiurayer/downkyi/issues" style="text-decoration:none">
-        <img alt="GitHub issues" src="https://img.shields.io/github/issues/leiurayer/downkyi">
-    </a>
     <a href="https://github.com/leiurayer/downkyi/blob/main/LICENSE" style="text-decoration:none" >
         <img alt="GitHub" src="https://img.shields.io/github/license/leiurayer/downkyi">
     </a>
